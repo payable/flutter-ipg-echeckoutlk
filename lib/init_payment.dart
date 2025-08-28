@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:payable_ipg_flutter/request_error.dart';
+import 'package:echeckoutlk_ipg_flutter/request_error.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import 'data/error_data.dart';
 import 'data/payment_data.dart';
@@ -11,8 +11,8 @@ import 'environment.dart';
 import 'ipg_client.dart';
 import 'utils.dart';
 
-class PAYableIPG extends StatefulWidget {
-  final PAYableIPGClient ipgClient;
+class ECheckoutLKIPG extends StatefulWidget {
+  final ECheckoutLKIPGClient ipgClient;
 
   // Required params for any payment
   final String? orderDescription;
@@ -75,7 +75,7 @@ class PAYableIPG extends StatefulWidget {
   final OnPaymentCancelled? onPaymentCancelled;
 
   /// Returns a [WebViewWidget] for the payment process.
-  PAYableIPG(
+  ECheckoutLKIPG(
       {super.key,
       required this.ipgClient,
       required this.paymentType,
@@ -122,10 +122,10 @@ class PAYableIPG extends StatefulWidget {
       this.onPaymentCancelled});
 
   @override
-  PAYableIPGState createState() => PAYableIPGState();
+  ECheckoutLKIPGState createState() => ECheckoutLKIPGState();
 }
 
-class PAYableIPGState extends State<PAYableIPG> {
+class ECheckoutLKIPGState extends State<ECheckoutLKIPG> {
   String? _responseUrl;
   bool _errorOccurred = false;
 
@@ -187,7 +187,7 @@ class PAYableIPGState extends State<PAYableIPG> {
 
       // Required params for all payments
       "orderDescription": (widget.orderDescription != null && widget.orderDescription!.isNotEmpty)?
-      widget.orderDescription : 'Order from Payable Mobile Payment',
+      widget.orderDescription : 'Order from eCheckoutLK Mobile Payment',
       "invoiceId": widget.invoiceId,
       "customerFirstName": widget.customerFirstName,
       "customerLastName": widget.customerLastName,

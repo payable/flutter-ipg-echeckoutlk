@@ -1,5 +1,5 @@
-name: payable_ipg_demo
-description: PAYable IPG Demo
+name: echeckoutlk_ipg_demo
+description: ECheckoutLK IPG Demo
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -15,7 +15,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
 # Read more about iOS versioning at
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-version: 2.0.5
+version: 3.0.0
 
 environment:
   sdk: ">=2.17.6 <3.0.0"
@@ -36,8 +36,8 @@ dependencies:
   cupertino_icons: ^1.0.8
 
   # Add the relative path of the IPG SDK
-  payable_ipg_flutter: ^2.0.4
-    # path: ../ # For development only
+  echeckoutlk_ipg_flutter:
+    path: ../ # For development only
 
   # Other dependencies
   shared_preferences: ^2.0.15 # To store merchant settings

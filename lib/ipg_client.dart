@@ -5,11 +5,11 @@ import 'package:http/http.dart' as http;
 
 import 'environment.dart';
 
-class PAYableIPGClient {
+class ECheckoutLKIPGClient {
   /// URL for your company's logo
   final String logoUrl;
   /// Called when the user tap 'Go Home' after completing a payment, which will
-  /// trigger [PAYableIPG.onPaymentCompleted].
+  /// trigger [ECheckoutLKIPG.onPaymentCompleted].
   final String returnUrl;
   /// The merchant key provided in merchant portal.
   final String merchantKey;
@@ -21,7 +21,7 @@ class PAYableIPGClient {
   final IPGEnvironment? environment;
 
   /// Sets the params applicable for all payments.
-  const PAYableIPGClient({
+  const ECheckoutLKIPGClient({
     required this.logoUrl,
     required this.returnUrl,
     required this.merchantKey,

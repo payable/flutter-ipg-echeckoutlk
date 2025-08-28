@@ -2,8 +2,8 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:payable_ipg_demo/form_data.dart';
-import 'package:payable_ipg_demo/pages.dart';
+import 'package:echeckoutlk_ipg_demo/form_data.dart';
+import 'package:echeckoutlk_ipg_demo/pages.dart';
 
 class CheckoutPage extends StatefulWidget {
   const CheckoutPage({super.key});

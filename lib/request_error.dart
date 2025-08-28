@@ -81,7 +81,7 @@ class _RequestErrorState extends State<RequestError> {
                 ),
               ),
               const Text(
-                'The payment will be processed through PAYable Private Limited.',
+                'The payment will be processed through ECheckoutLK Private Limited.',
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 12.0, color: Colors.grey),
               ),

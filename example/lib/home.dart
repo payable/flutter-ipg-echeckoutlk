@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:payable_ipg_demo/pages.dart';
+import 'package:echeckoutlk_ipg_demo/pages.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});

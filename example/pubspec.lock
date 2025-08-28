@@ -65,6 +65,13 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.8"
+  echeckoutlk_ipg_flutter:
+    dependency: "direct main"
+    description:
+      path: ".."
+      relative: true
+    source: path
+    version: "2.0.4"
   fake_async:
     dependency: transitive
     description:
@@ -232,14 +239,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.2.1"
-  payable_ipg_flutter:
-    dependency: "direct main"
-    description:
-      name: payable_ipg_flutter
-      sha256: "3de0c6bda971f97a8a3143fa81d2fdbc672924e36a4c8e699367173cde02af87"
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.0.4"
   platform:
     dependency: transitive
     description:

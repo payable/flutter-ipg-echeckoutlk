@@ -1,4 +1,4 @@
-library payable_ipg.utils;
+library echeckoutlkipg.utils;
 
 import 'package:package_info/package_info.dart';
 import 'package:crypto/crypto.dart';

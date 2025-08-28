@@ -1,7 +1,7 @@
-name: payable_ipg_flutter
-description: PAYable IPG SDK for Flutter
+name: echeckoutlk_ipg_flutter
+description: eCheckoutLK IPG SDK for Flutter
 version: 2.0.4
-repository: https://github.com/payable/flutter-ipg
+repository: https://github.com/payable/flutter-ipg-echeckoutlk
 homepage: https://flutter-ipg.payable.lk
 
 environment:

@@ -3,8 +3,8 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:payable_ipg_flutter/payable_ipg_flutter.dart';
-import 'package:payable_ipg_demo/form_data.dart';
+import 'package:echeckoutlk_ipg_flutter/echeckoutlk_ipg_flutter.dart';
+import 'package:echeckoutlk_ipg_demo/form_data.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class PaymentPage extends StatefulWidget {
@@ -15,8 +15,8 @@ class PaymentPage extends StatefulWidget {
 }
 
 class _PaymentPageState extends State<PaymentPage> {
-  PAYableIPGClient? _myIpgClient;
-  PAYableIPG? _payableIPG;
+  ECheckoutLKIPGClient? _myIpgClient;
+  ECheckoutLKIPG? _eCheckoutLKIPG;
   List<String>? _errorMessages;
   bool _loadIPG = true;
 
@@ -25,8 +25,8 @@ class _PaymentPageState extends State<PaymentPage> {
     _loadData();
 
     Widget children;
-    if (_payableIPG != null && _loadIPG) {
-      children = _payableIPG as Widget;
+    if (_eCheckoutLKIPG != null && _loadIPG) {
+      children = _eCheckoutLKIPG as Widget;
     } else if (_errorMessages != null) {
       children = Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -58,15 +58,15 @@ class _PaymentPageState extends State<PaymentPage> {
     CheckoutFormData form = Get.find();
 
     setState(() {
-      _myIpgClient = PAYableIPGClient(
+      _myIpgClient = ECheckoutLKIPGClient(
           logoUrl: prefs.getString('logoUrl') ?? '',
-          returnUrl: 'https://com.example.payable_ipg_example',
+          returnUrl: 'https://com.example.echeckoutlk_ipg_example',
           merchantKey: prefs.getString('merchantKey') ?? '',
           merchantToken: prefs.getString('merchantToken') ?? '',
           webhookUrl: prefs.getString('notificationUrl') ?? '',
-          environment: IPGEnvironment.dev);
+          environment: IPGEnvironment.sandbox);
 
-      _payableIPG = PAYableIPG(
+      _eCheckoutLKIPG = ECheckoutLKIPG(
           ipgClient: _myIpgClient!,
           paymentType: form.paymentType,
           orderDescription: form.orderDescription!,

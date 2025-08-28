@@ -1,4 +1,4 @@
-### PAYable IPG - Flutter Integration
+### ECheckoutLK IPG - Flutter Integration
 
 ![](https://i.imgur.com/ERpCDa7.png)
 
@@ -23,23 +23,23 @@ android {
 <b>2.</b> Add the below package into your `pubspec.yaml` file.
 
 ```yaml
-payable_ipg_flutter: ^2.0.4
+echeckoutlk_ipg_flutter: ^2.0.4
 ```
 
 <hr/>
 
 ### Implementation
 
-<b>1.</b> Import PAYable IPG SDK package.
+<b>1.</b> Import ECheckoutLK IPG SDK package.
 
 ```dart
-import 'package:payable_ipg_flutter/payable_ipg_flutter.dart';
+import 'package:echeckoutlk_ipg_flutter/echeckoutlk_ipg_flutter.dart';
 ```
 
-<b>2.</b> Create PAYable IPG client with `PAYableIPGClient`.
+<b>2.</b> Create ECheckoutLK IPG client with `ECheckoutLKIPGClient`.
 
 ```dart 
-PAYableIPGClient ipgClient = PAYableIPGClient(
+ECheckoutLKIPGClient ipgClient = ECheckoutLKIPGClient(
     merchantKey: "YOUR_MERCHANT_KEY",
     merchantToken: "YOUR_MERCHANT_TOKEN",
     returnUrl: "YOUR_RETURN_URL_TO_REDIRECT",
@@ -48,11 +48,11 @@ PAYableIPGClient ipgClient = PAYableIPGClient(
 );
 ```
 
-<b>3.</b> Call `PAYableIPG` into your application body.
+<b>3.</b> Call `ECheckoutLKIPG` into your application body.
 
 > One-time payments
 ```dart
-PAYableIPG(
+ECheckoutLKIPG(
     ipgClient: ipgClient,
     amount: "100.45",
     currencyCode: "LKR",
@@ -72,7 +72,7 @@ PAYableIPG(
 
 > Recurring payments
 ```dart
-PAYableIPG(
+ECheckoutLKIPG(
     ipgClient: ipgClient,
     amount: "350.00", // Sets the amount needs to be charged along with this payment
     currencyCode: "LKR",
@@ -124,11 +124,11 @@ shippingPostcode
 
 ```dart
 import 'package:flutter/material.dart';
-import 'package:payable_ipg_flutter/payable_ipg_flutter.dart';
+import 'package:echeckoutlk_ipg_flutter/echeckoutlk_ipg_flutter.dart';
 
 class _PaymentPageState extends State<PaymentPage> {
-  PAYableIPGClient? _myIpgClient;
-  PAYableIPG? _payableIPG;
+  ECheckoutLKIPGClient? _myIpgClient;
+  ECheckoutLKIPG? _eCheckoutLKIPG;
   List<String>? _errorMessages;
   bool _loadIPG = true;
 
@@ -137,8 +137,8 @@ class _PaymentPageState extends State<PaymentPage> {
     _loadData();
 
     Widget children;
-    if (_payableIPG != null && _loadIPG) {
-      children = _payableIPG as Widget;
+    if (_eCheckoutLKIPG != null && _loadIPG) {
+      children = _eCheckoutLKIPG as Widget;
     }
     else if (_errorMessages != null) {
       children = Column(
@@ -172,7 +172,7 @@ class _PaymentPageState extends State<PaymentPage> {
 
   Future<void> _loadData() async {
     setState(() {
-        _myIpgClient = const PAYableIPGClient(
+        _myIpgClient = const ECheckoutLKIPGClient(
           logoUrl: "https://i.imgur.com/l21F5us.png",
           returnUrl: "https://example.com/receipt",
           merchantKey: "A748BFC24F8F6C61",
@@ -180,7 +180,7 @@ class _PaymentPageState extends State<PaymentPage> {
           webhookUrl: "https://ipgv2-ntb.payable.lk/new-js-sdk/api/"
         );
 
-        _payableIPG = PAYableIPG(
+        _eCheckoutLKIPG = ECheckoutLKIPG(
           ipgClient: myIpgClient,
           amount: "100.00",
           currencyCode: "LKR",
@@ -245,4 +245,4 @@ var data = await ipgClient.getStatus("uid", "resultIndicator");
 
 <br>
 
-PAYable IPG SDK - Flutter Integration
+ECheckoutLK IPG SDK - Flutter Integration
