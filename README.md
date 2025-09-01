@@ -177,7 +177,7 @@ class _PaymentPageState extends State<PaymentPage> {
           returnUrl: "https://example.com/receipt",
           merchantKey: "A748BFC24F8F6C61",
           merchantToken: "09FD8632EED1D1FEB9AD9A5E55427452",
-          webhookUrl: "https://ipgv2-ntb.payable.lk/new-js-sdk/api/"
+          webhookUrl: "https://your-webhook-url.example.com"
         );
 
         _eCheckoutIPG = ECheckoutIPG(
@@ -236,13 +236,6 @@ var data = await ipgClient.getStatus("uid", "resultIndicator");
 ```
 
 <hr/>
-
-### Demo
-
-![](https://raw.githubusercontent.com/payable/flutter-ipg/master/screen.gif)
-
-> If you want to do more customization on this package, you can get the source code from this repository and use it for further development.
-
 <br>
 
 ECheckout IPG SDK - Flutter Integration
