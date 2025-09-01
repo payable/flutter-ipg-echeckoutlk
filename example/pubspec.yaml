@@ -1,5 +1,5 @@
-name: echeckoutlk_ipg_demo
-description: ECheckoutLK IPG Demo
+name: echeckout_ipg_demo
+description: ECheckout IPG Demo
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -36,7 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.8
 
   # Add the relative path of the IPG SDK
-  echeckoutlk_ipg_flutter:
+  echeckout_ipg_flutter:
     path: ../ # For development only
 
   # Other dependencies

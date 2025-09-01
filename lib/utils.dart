@@ -1,4 +1,4 @@
-library echeckoutlkipg.utils;
+library echeckoutipg.utils;
 
 import 'package:package_info/package_info.dart';
 import 'package:crypto/crypto.dart';

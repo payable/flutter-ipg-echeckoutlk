@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:echeckoutlk_ipg_demo/form_data.dart';
+import 'package:echeckout_ipg_demo/form_data.dart';
 
 import '../pages.dart';
 

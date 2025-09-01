@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:echeckoutlk_ipg_demo/forms/checkout.dart';
-import 'package:echeckoutlk_ipg_demo/forms/billing_details.dart';
-import 'package:echeckoutlk_ipg_demo/forms/payment_details.dart';
-import 'package:echeckoutlk_ipg_demo/pages.dart';
-import 'package:echeckoutlk_ipg_demo/payment.dart';
-import 'package:echeckoutlk_ipg_demo/settings.dart';
-import 'package:echeckoutlk_ipg_demo/forms/shipping_details.dart';
+import 'package:echeckout_ipg_demo/forms/checkout.dart';
+import 'package:echeckout_ipg_demo/forms/billing_details.dart';
+import 'package:echeckout_ipg_demo/forms/payment_details.dart';
+import 'package:echeckout_ipg_demo/pages.dart';
+import 'package:echeckout_ipg_demo/payment.dart';
+import 'package:echeckout_ipg_demo/settings.dart';
+import 'package:echeckout_ipg_demo/forms/shipping_details.dart';
 import 'home.dart';
 
 void main() {
   runApp(
     MaterialApp(
-      title: 'eCheckoutLK IPG Demo',
+      title: 'eCheckout IPG Demo',
       debugShowCheckedModeBanner: false,
       initialRoute: Pages.home,
       routes: {

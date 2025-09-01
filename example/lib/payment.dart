@@ -3,8 +3,8 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:echeckoutlk_ipg_flutter/echeckoutlk_ipg_flutter.dart';
-import 'package:echeckoutlk_ipg_demo/form_data.dart';
+import 'package:echeckout_ipg_flutter/echeckout_ipg_flutter.dart';
+import 'package:echeckout_ipg_demo/form_data.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class PaymentPage extends StatefulWidget {
@@ -15,8 +15,8 @@ class PaymentPage extends StatefulWidget {
 }
 
 class _PaymentPageState extends State<PaymentPage> {
-  ECheckoutLKIPGClient? _myIpgClient;
-  ECheckoutLKIPG? _eCheckoutLKIPG;
+  ECheckoutIPGClient? _myIpgClient;
+  ECheckoutIPG? _eCheckoutIPG;
   List<String>? _errorMessages;
   bool _loadIPG = true;
 
@@ -25,8 +25,8 @@ class _PaymentPageState extends State<PaymentPage> {
     _loadData();
 
     Widget children;
-    if (_eCheckoutLKIPG != null && _loadIPG) {
-      children = _eCheckoutLKIPG as Widget;
+    if (_eCheckoutIPG != null && _loadIPG) {
+      children = _eCheckoutIPG as Widget;
     } else if (_errorMessages != null) {
       children = Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -58,15 +58,15 @@ class _PaymentPageState extends State<PaymentPage> {
     CheckoutFormData form = Get.find();
 
     setState(() {
-      _myIpgClient = ECheckoutLKIPGClient(
+      _myIpgClient = ECheckoutIPGClient(
           logoUrl: prefs.getString('logoUrl') ?? '',
-          returnUrl: 'https://com.example.echeckoutlk_ipg_example',
+          returnUrl: 'https://com.example.echeckout_ipg_example',
           merchantKey: prefs.getString('merchantKey') ?? '',
           merchantToken: prefs.getString('merchantToken') ?? '',
           webhookUrl: prefs.getString('notificationUrl') ?? '',
           environment: IPGEnvironment.sandbox);
 
-      _eCheckoutLKIPG = ECheckoutLKIPG(
+      _eCheckoutIPG = ECheckoutIPG(
           ipgClient: _myIpgClient!,
           paymentType: form.paymentType,
           orderDescription: form.orderDescription!,
