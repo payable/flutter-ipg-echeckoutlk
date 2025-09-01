@@ -21,7 +21,7 @@ android {
 <b>2.</b> Add the below package into your `pubspec.yaml` file.
 
 ```yaml
-echeckout_ipg_flutter: ^3.0.0
+echeckout_ipg_flutter: ^3.0.1
 ```
 
 <hr/>
