@@ -32,7 +32,11 @@ ErrorData getErrorData(String responseData) {
 
     switch (statusCode) {
       case 403:
-        errorData.error = jsonData['error']['message'];
+        try {
+          errorData.error = jsonData['error']['message'];
+        } catch (e) {
+          errorData.error = {'message': jsonData['error']};
+        }
         break;
       case 400:
         if (jsonData.containsKey('errors')) {

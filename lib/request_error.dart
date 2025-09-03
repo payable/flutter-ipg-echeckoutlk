@@ -26,12 +26,12 @@ class _RequestErrorState extends State<RequestError> {
             mainAxisSize: MainAxisSize.min,
             children: [
               Row(
-                mainAxisAlignment: MainAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(bottom: 8),
                     child: Image.network(
-                      'https://www.payable.lk/my-content/uploads/2022/11/footerlogo.png',
+                      'https://echeckout.lk/gallery_gen/090beaf52b3b5e6fad3fb741065dbafc_203x203_195x23_602x360_crop.png',
                       scale: 1.5,
                     ),
                   )
@@ -82,11 +82,6 @@ class _RequestErrorState extends State<RequestError> {
               ),
               const Text(
                 'The payment will be processed through ECheckout Private Limited.',
-                textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 12.0, color: Colors.grey),
-              ),
-              const Text(
-                'For Inquiries; Call Customer Support at +94 11 777 6 777',
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 12.0, color: Colors.grey),
               ),

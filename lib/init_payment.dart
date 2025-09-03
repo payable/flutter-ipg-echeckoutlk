@@ -173,7 +173,7 @@ class ECheckoutIPGState extends State<ECheckoutIPG> {
       // Hardcoded, developer is not allowed to set the values
       "isMobilePayment": 1,
       "integrationType": "Flutter SDK",
-      "integrationVersion": "2.0.4",
+      "integrationVersion": "3.0.2",
       "statusReturnUrl": "${getEndpoint(environment)}/status-view",
 
       // Generated internally, developer is not allowed to set the values
@@ -183,7 +183,8 @@ class ECheckoutIPGState extends State<ECheckoutIPG> {
           merchantToken: widget.ipgClient.merchantToken,
           invoiceId: widget.invoiceId,
           amount: widget.amount,
-          currencyCode: widget.currencyCode),
+          currencyCode: widget.currencyCode
+      ),
 
       // Required params for all payments
       "orderDescription": (widget.orderDescription != null && widget.orderDescription!.isNotEmpty)?
