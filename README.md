@@ -21,7 +21,7 @@ android {
 <b>2.</b> Add the below package into your `pubspec.yaml` file.
 
 ```yaml
-echeckout_ipg_flutter: ^3.0.1
+echeckout_ipg_flutter: ^3.0.2
 ```
 
 <hr/>
@@ -87,10 +87,10 @@ ECheckoutIPG(
     startDate: '2024-05-27',
     endDate: '2024-11-27',
     recurringAmount: 350.00, // Sets the amount needs to be recurred 
-    interval: 'MONTHLY', // Sets how often the payment is made. The value can be MONTHLY, QUARTERLY or ANNUALLY.
+    interval: 'MONTHLY', // Sets how often the payment is made. The value can be DAILY, WEEKLY, MONTHLY, QUARTERLY or ANNUALLY.
     isRetry: '1', // Sets whether automatic retying is allowed in case of a payment fails. (1 - allowed, 0 - not allowed)
     retryAttempts: '3', // Sets the amount of days that automatic retrying will be performed. (max: 5)
-    doFirstPayment: '1', // Sets whether the user is making the initial payment of this subscription along with this payment. 
+    doFirstPayment: '1', // Sets whether the user is making the initial payment of this subscription along with this payment (1 - allowed, 0 - not allowed). 
 )
 ```
 
